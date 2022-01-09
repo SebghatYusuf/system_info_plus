@@ -1,3 +1,5 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- TODO: initial release.
+- Update: readme.md
+- Support for Android and iOS
