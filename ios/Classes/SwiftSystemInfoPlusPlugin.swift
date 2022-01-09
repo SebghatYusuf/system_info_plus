@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftPluginExamplePlugin: NSObject, FlutterPlugin {
+public class SwiftSystemInfoPlusPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "dev/system_info_plus", binaryMessenger: registrar.messenger())
-    let instance = SwiftPluginExamplePlugin()
+    let instance = SwiftSystemInfoPlusPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
@@ -19,7 +19,6 @@ public class SwiftPluginExamplePlugin: NSObject, FlutterPlugin {
    }
   // Returns random access memory size in megabytes 
   private func getMemorySize() -> Int{
-      let device = UIDevice.current
       let memory : Int = Int(ProcessInfo.processInfo.physicalMemory)
       let constant : Int = 1_048_576
       let res = memory / constant
