@@ -10,7 +10,7 @@ class SystemInfoPlus {
     return version;
   }
 
-  static Future<int?> get systemMemory async {
+  static Future<int?> get physicalMemory async {
     final int? ramSize = await _channel.invokeMethod('getMemorySpace');
     return ramSize;
   }

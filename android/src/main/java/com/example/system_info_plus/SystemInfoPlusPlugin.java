@@ -1,7 +1,10 @@
 package com.example.system_info_plus;
 
 import androidx.annotation.NonNull;
-
+import android.app.ActivityManager;
+import android.app.ActivityManager.MemoryInfo;
+import android.app.Activity;
+import android.content.Context;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
@@ -16,10 +19,7 @@ public class SystemInfoPlusPlugin implements FlutterPlugin, MethodCallHandler {
 
 
     private Context applicationContext;
-    private BroadcastReceiver chargingStateChangeReceiver;
     private MethodChannel methodChannel;
-    private EventChannel eventChannel;
-
 
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
