@@ -7,3 +7,6 @@
 ## 0.0.2
 
 - Update Readme: add code example
+## 0.0.3
+
+- Update pubspec.yaml: Fix repository url
