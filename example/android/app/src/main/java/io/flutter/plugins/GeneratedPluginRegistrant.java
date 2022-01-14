@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import io.flutter.Log;
 
 import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 
 /**
  * Generated file. Do not edit.
@@ -15,8 +16,9 @@ import io.flutter.embedding.engine.FlutterEngine;
 public final class GeneratedPluginRegistrant {
   private static final String TAG = "GeneratedPluginRegistrant";
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
+    ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
     try {
-      flutterEngine.getPlugins().add(new com.example.system_info_plus.SystemInfoPlusPlugin());
+      com.example.system_info_plus.SystemInfoPlusPlugin.registerWith(shimPluginRegistry.registrarFor("com.example.system_info_plus.SystemInfoPlusPlugin"));
     } catch(Exception e) {
       Log.e(TAG, "Error registering plugin system_info_plus, com.example.system_info_plus.SystemInfoPlusPlugin", e);
     }
