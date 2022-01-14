@@ -1,16 +1,7 @@
 package com.example.system_info_plus;
 
-import androidx.annotation.NonNull;
 import android.app.ActivityManager;
-import android.app.ActivityManager.MemoryInfo;
-import android.app.Activity;
 import android.content.Context;
-import io.flutter.embedding.engine.plugins.FlutterPlugin;
-import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
-import io.flutter.plugin.common.MethodChannel.Result;
 
 /**
  * SystemInfoPlusPlugin
@@ -58,7 +49,6 @@ public class SystemInfoPlusPlugin implements FlutterPlugin, MethodCallHandler {
         ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
         assert actManager != null;
         actManager.getMemoryInfo(memInfo);
-        long totalMemory = memInfo.totalMem;
-        return totalMemory;
+        return memInfo.totalMem;
     }
 }
