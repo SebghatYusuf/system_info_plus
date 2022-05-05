@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -16,7 +18,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
   int _deviceMemory = -1;
 
   @override
@@ -27,21 +28,16 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String platformVersion;
     int deviceMemory;
 
     try {
-      platformVersion =
-          await SystemInfoPlus.platformVersion ?? 'Unknown platform version';
       deviceMemory = await SystemInfoPlus.physicalMemory ?? -1;
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
       deviceMemory = -1;
     }
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
       _deviceMemory = deviceMemory;
     });
   }
@@ -54,12 +50,11 @@ class _MyAppState extends State<MyApp> {
           title: const Text('System info plugin example'),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Text('Running on: $_platformVersion\n'),
-            ),
-            Center(
-              child: Text('Random Access Memory (MB): $_deviceMemory'),
+              child:
+                  Text('Random Access Memory: $_deviceMemory MB (Megabytes)'),
             ),
           ],
         ),
