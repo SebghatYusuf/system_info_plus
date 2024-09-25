@@ -23,7 +23,7 @@ apply plugin: 'com.android.library'
 
 android {
     namespace 'com.example.system_info_plus'
-    compileSdkVersion 30
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -32,5 +32,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+        targetSdkVersion 34
     }
 }
