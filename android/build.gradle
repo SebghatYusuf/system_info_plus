@@ -22,10 +22,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    if (project.android.hasProperty("namespace")) {
-        namespace 'com.example.system_info_plus'
-    }
-    compileSdkVersion 30
+    namespace 'com.example.system_info_plus'
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -34,5 +32,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+        targetSdkVersion 34
     }
 }
