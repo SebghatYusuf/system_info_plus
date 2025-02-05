@@ -1,11 +1,11 @@
 name: system_info_plus
 description: A flutter plugin to get device (system) info including Random access memory (RAM).
-version: 0.0.5
+version: 0.0.6
 homepage:
 repository: https://github.com/SebghatYusuf/system_info_plus
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
+  sdk: ">=2.15.1 <4.0.0"
   flutter: ">=2.5.0"
 
 dependencies:
