@@ -15,6 +15,6 @@
 
 - Update pubspec.yaml & Add comments
 
-## 0.0.5
+## 0.0.6
 
 - Fix: Add namespace to support new flutter versions. 
