@@ -27,3 +27,6 @@
 .dart_tool/
 .packages
 build/
+
+# Android local SDK path config
+android/local.properties
